@@ -36,6 +36,8 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "krita",    NULL,       "Krita",    0,            1,           -1 },
+	{ "krita",    NULL,       NULL,    0,            0,           -1 },
 /*	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 }, */
 };
 
@@ -97,8 +99,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_minus,  setborderpx,    {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_p,   setborderpx,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_bracketleft,  setborderpx,    {.i = -1 } },
+	{ MODKEY|ShiftMask,             XK_bracketright,   setborderpx,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_numbersign, setborderpx, {.i = 0 } },
 	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
 	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
@@ -112,6 +114,15 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_KP_End,                    0)
+	TAGKEYS(                        XK_KP_Down,                   1)
+	TAGKEYS(                        XK_KP_Page_Down,              2)
+	TAGKEYS(                        XK_KP_Left,                   3)
+	TAGKEYS(                        XK_KP_Begin,                  4)
+	TAGKEYS(                        XK_KP_Right,                  5)
+	TAGKEYS(                        XK_KP_Home,                   6)
+	TAGKEYS(                        XK_KP_Up,                     7)
+	TAGKEYS(                        XK_KP_Page_Up,                8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
